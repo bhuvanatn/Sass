@@ -1,0 +1,62 @@
+// THE SASS 
+// =============================
+/* comments */
+$black: #333
+$pale: #d2e1dd
+$pink: #c69
+$blue: #036
+
+$font-stack: 'Andale Mono', monospace
+$font-size: 14px
+
+// VARIABLES
+
+
+// MIXINS
+=circlething($rad, $height, $width, $bg, $colour)
+    -webkit-border-radius: $rad
+    -moz-border-radius:    $rad
+    -ms-border-radius:     $rad
+    border-radius:         $rad
+    
+    text-aling:  center ! important
+
+    height:  $height
+    width:   $width
+
+    line-height: $height
+    
+    background: $bg
+    color:      $colour
+   
+    margin: 0 auto
+
+
+// STYLES
+body
+    background: $pale
+    color: $black
+    font-family: $font-stack 
+    font-size: $font-size
+     
+article
+    background: white
+    width: 760px
+    margin: -60px auto 0
+    padding: 40px
+    box-sizing: border-box
+    position: relative
+    z-index: -3
+        
+header
+    +circlething(100%, 200px, 200px, $blue, white)
+h1
+    font-size: $font-size + 2
+
+footer
+    +circlething(100%, 150px, 150px, $pink, $pale)
+    font-size: $font-size - 3
+    position: relative
+    z-index: -4
+    margin-top: -60px
+    text-aling: center
